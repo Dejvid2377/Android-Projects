@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/startScreen">
+
+    <fragment
+        android:id="@+id/startScreen"
+        android:name="com.example.projekt.StartScreen"
+        android:label="fragment_start_screen"
+        tools:layout="@layout/fragment_start_screen" >
+        <action
+            android:id="@+id/action_startScreen_to_menu"
+            app:destination="@id/menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu"
+        android:name="com.example.projekt.Menu"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menu_to_kitchenResources"
+            app:destination="@id/kitchenResources" />
+        <action
+            android:id="@+id/action_menu_to_freezerResources"
+            app:destination="@id/freezerResources" />
+        <action
+            android:id="@+id/action_menu_to_sendMessage"
+            app:destination="@id/sendMessage" />
+    </fragment>
+    <fragment
+        android:id="@+id/freezerResources"
+        android:name="com.example.projekt.FreezerResources"
+        android:label="fragment_freezer_resources"
+        tools:layout="@layout/fragment_freezer_resources" />
+    <fragment
+        android:id="@+id/sendMessage"
+        android:name="com.example.projekt.SendMessage"
+        android:label="fragment_send_message"
+        tools:layout="@layout/fragment_send_message" />
+    <fragment
+        android:id="@+id/kitchenResources"
+        android:name="com.example.projekt.KitchenResources"
+        android:label="fragment_kitchen_resources"
+        tools:layout="@layout/fragment_kitchen_resources" />
+</navigation>

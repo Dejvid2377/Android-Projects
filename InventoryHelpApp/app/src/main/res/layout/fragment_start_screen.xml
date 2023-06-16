@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="#FFFF22"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartScreen"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/taskInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/ic_launcher_background"
+        android:text="WPROWADŹ NAZWĘ NOWEGO RAPORTU: "
+        android:textColor="@color/design_default_color_error"
+        android:textSize="20sp"
+        tools:ignore="TextSizeCheck" />
+
+    <EditText
+        android:id="@+id/raportName"
+        android:inputType="text"
+        android:autofillHints="name"
+        android:labelFor="@+id/labelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Tu wprowadź nazwę raportu..."
+        android:textSize="20sp"
+        android:layout_marginBottom="20dp"
+        tools:ignore="LabelFor" />
+    <Button
+        android:id="@+id/acceptButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rozpocznij tworzenie raportu"
+        android:textSize="14sp"
+        android:enabled="false"/>
+
+</LinearLayout>
