@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.projekt.databinding.FragmentStartScreenBinding
@@ -16,13 +17,18 @@ import com.example.projekt.databinding.FragmentStartScreenBinding
 class StartScreen : Fragment() {
     private var _binding: FragmentStartScreenBinding? = null
     private val binding get() = _binding!!
-    private val mainVm by viewModels<MainViewModel> ()
+    private val mainViewModel : MainViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentStartScreenBinding.inflate(layoutInflater, container,false)
+
+        mainViewModel.sheetName.observe(viewLifecycleOwner) { sheetName ->
+            binding.raportName.setText(sheetName)
+        }
+
         return binding.root
     }
 
@@ -42,8 +48,8 @@ class StartScreen : Fragment() {
         })
 
         binding.acceptButton.setOnLongClickListener {
-            mainVm.sheetName = binding.raportName.text.toString()
-            Toast.makeText(requireContext(), "Click ${mainVm.sheetName}", Toast.LENGTH_SHORT).show()
+            mainViewModel.saveSheetName(binding.raportName.text.toString())
+            Toast.makeText( requireContext(),"Click ${mainViewModel.sheetName.value}", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_startScreen_to_menu)
             true
         }

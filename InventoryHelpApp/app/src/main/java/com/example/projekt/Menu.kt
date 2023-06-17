@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.projekt.databinding.FragmentMenuBinding
@@ -13,7 +14,7 @@ import com.example.projekt.databinding.FragmentMenuBinding
 class Menu : Fragment() {
     private var _binding : FragmentMenuBinding? = null
     private val binding get() = _binding!!
-    private val mainVm by viewModels<MainViewModel> ()
+    private val mainViewModel : MainViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,7 +43,7 @@ class Menu : Fragment() {
         view.post {
 
             freezerFragment.setButtonClickListener {
-                Toast.makeText( requireContext(),"Click ${mainVm.sheetName}", Toast.LENGTH_SHORT).show()
+                Toast.makeText( requireContext(),"Click ${mainViewModel.sheetName.value}", Toast.LENGTH_SHORT).show()
                 findNavController().navigate(R.id.action_menu_to_freezerResources)
             }
 
