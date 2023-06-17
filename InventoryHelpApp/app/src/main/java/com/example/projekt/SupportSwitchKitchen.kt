@@ -20,8 +20,16 @@ class SupportSwitchKitchen : Fragment() {
         return binding.root
     }
 
+    private fun setKitchenSwitchButtonClickListener(listener: View.OnClickListener) {
+        _binding?.kitchenSwitchButton?.setOnClickListener(listener)
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    fun setButtonClickListener(listener: () -> Unit) {
+        binding.kitchenSwitchButton.setOnClickListener { listener.invoke() }
     }
 }

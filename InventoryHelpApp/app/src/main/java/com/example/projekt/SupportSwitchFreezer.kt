@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.projekt.databinding.FragmentSupportSwitchFreezerBinding
 
 class SupportSwitchFreezer : Fragment() {
@@ -20,9 +21,28 @@ class SupportSwitchFreezer : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Set the click listener for the freezerSwitchButton
+        setFreezerSwitchButtonClickListener {
+            // Perform your desired action here
+            // For example, navigate to another fragment
+            findNavController().navigate(R.id.action_menu_to_freezerResources)
+        }
+    }
+
+    private fun setFreezerSwitchButtonClickListener(listener: View.OnClickListener) {
+        _binding?.freezerSwitchButton?.setOnClickListener(listener)
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    fun setButtonClickListener(listener: () -> Unit) {
+        binding.freezerSwitchButton.setOnClickListener { listener.invoke() }
     }
 
 }
