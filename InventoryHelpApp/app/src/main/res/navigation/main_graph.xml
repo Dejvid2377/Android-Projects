@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_start_screen" >
         <action
             android:id="@+id/action_startScreen_to_menu"
-            app:destination="@id/menu" />
+            app:destination="@id/menu"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/menu"
@@ -21,13 +25,25 @@
         tools:layout="@layout/fragment_menu" >
         <action
             android:id="@+id/action_menu_to_kitchenResources"
-            app:destination="@id/kitchenResources" />
+            app:destination="@id/kitchenResources"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_menu_to_freezerResources"
-            app:destination="@id/freezerResources" />
+            app:destination="@id/freezerResources"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"/>
         <action
             android:id="@+id/action_menu_to_sendMessage"
-            app:destination="@id/sendMessage" />
+            app:destination="@id/sendMessage"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"/>
     </fragment>
     <fragment
         android:id="@+id/freezerResources"

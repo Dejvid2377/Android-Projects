@@ -41,7 +41,6 @@ class Menu : Fragment() {
 
         // Wait until the view is created before setting the click listener
         view.post {
-
             freezerFragment.setButtonClickListener {
                 Toast.makeText( requireContext(),"Click ${mainViewModel.sheetName.value}", Toast.LENGTH_SHORT).show()
                 findNavController().navigate(R.id.action_menu_to_freezerResources)
@@ -57,8 +56,6 @@ class Menu : Fragment() {
 
         }
     }
-
-
 
     override fun onDestroyView() {
         super.onDestroyView()
