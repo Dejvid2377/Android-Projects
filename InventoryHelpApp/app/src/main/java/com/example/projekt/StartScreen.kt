@@ -9,7 +9,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.projekt.databinding.FragmentStartScreenBinding
 
@@ -45,6 +44,8 @@ class StartScreen : Fragment() {
             }
 
             override fun afterTextChanged(s: Editable?) { }
+
+
         })
 
         binding.acceptButton.setOnLongClickListener {
@@ -52,6 +53,14 @@ class StartScreen : Fragment() {
             Toast.makeText( requireContext(),"Click ${mainViewModel.sheetName.value}", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_startScreen_to_menu)
             true
+        }
+
+        binding.circle.setOnClickListener {
+            binding.circle.animate().apply {
+                duration = 1000
+                rotationBy(360f)
+                start()
+            }
         }
     }
 

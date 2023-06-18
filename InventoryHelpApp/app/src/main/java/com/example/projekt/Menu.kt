@@ -53,7 +53,6 @@ class Menu : Fragment() {
             kitchenFragment.setButtonClickListener {
                 findNavController().navigate(R.id.action_menu_to_kitchenResources)
             }
-
         }
     }
 

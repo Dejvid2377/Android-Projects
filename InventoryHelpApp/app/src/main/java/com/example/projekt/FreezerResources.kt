@@ -47,33 +47,33 @@ class FreezerResources : Fragment() {
     private fun addData(sheet: Sheet) {
 
         //Creating rows at passed in indices
-        val row1 = sheet.createRow(0)
-        val row2 = sheet.createRow(1)
-        val row3 = sheet.createRow(2)
-        val row4 = sheet.createRow(3)
-        val row5 = sheet.createRow(4)
-        val row6 = sheet.createRow(5)
-        val row7 = sheet.createRow(6)
-        val row8 = sheet.createRow(7)
+        val row1 = sheet.createRow(10)
+        val row2 = sheet.createRow(11)
+        val row3 = sheet.createRow(12)
+        val row4 = sheet.createRow(13)
+        val row5 = sheet.createRow(14)
+        val row6 = sheet.createRow(15)
+        val row7 = sheet.createRow(16)
+        val row8 = sheet.createRow(17)
 
         //Adding data to each  cell
         createCell(row1, 0, "Name")
-        createCell(row1, 1, "Score")
+        createCell(row1, 7, "Score")
 
         createCell(row2, 0, "Mike")
-        createCell(row2, 1, "470")
+        createCell(row2, 6, "470")
 
         createCell(row3, 0, "Montessori")
-        createCell(row3, 1, "460")
+        createCell(row3, 5, "460")
 
         createCell(row4, 0, "Sandra")
-        createCell(row4, 1, "380")
+        createCell(row4, 4, "380")
 
         createCell(row5, 0, "Moringa")
-        createCell(row5, 1, "300")
+        createCell(row5, 3, "300")
 
         createCell(row6, 0, "Torres")
-        createCell(row6, 1, "270")
+        createCell(row6, 2, "270")
 
         createCell(row7, 0, "McGee")
         createCell(row7, 1, "420")

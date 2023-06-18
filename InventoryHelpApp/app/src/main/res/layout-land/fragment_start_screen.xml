@@ -12,13 +12,13 @@
     <TextView
         android:id="@+id/taskInfo"
         android:layout_width="wrap_content"
-        android:layout_height="10dp"
+        android:layout_height="45dp"
         android:background="#AFF222"
         android:text="WPROWADŹ NAZWĘ NOWEGO RAPORTU: "
         android:textColor="@color/design_default_color_error"
         android:textSize="20sp"
         tools:ignore="TextSizeCheck"
-        android:layout_weight="0.5"/>
+        />
 
     <EditText
         android:id="@+id/raportName"
@@ -29,16 +29,16 @@
         android:layout_height="wrap_content"
         android:hint="Tu wprowadź nazwę raportu..."
         android:textSize="25sp"
+        android:layout_marginBottom="100dp"
         tools:ignore="LabelFor"
-        android:layout_weight="0.5"/>
-
+        />
     <ImageView
         android:id="@+id/circle"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:src="@drawable/circle"
-        android:layout_weight="2"/>
-
+        android:layout_weight="2"
+        android:visibility="gone"/>
     <Button
         android:id="@+id/acceptButton"
         android:layout_width="wrap_content"
@@ -46,6 +46,6 @@
         android:enabled="false"
         android:text="Rozpocznij tworzenie raportu"
         android:textSize="14sp"
-        android:layout_weight="0.5"/>
+        />
 
 </LinearLayout>
