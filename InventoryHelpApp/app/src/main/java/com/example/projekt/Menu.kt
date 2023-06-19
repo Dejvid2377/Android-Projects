@@ -5,16 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.projekt.databinding.FragmentMenuBinding
 
 class Menu : Fragment() {
     private var _binding : FragmentMenuBinding? = null
     private val binding get() = _binding!!
-    private val mainViewModel : MainViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,7 +38,6 @@ class Menu : Fragment() {
         // Wait until the view is created before setting the click listener
         view.post {
             freezerFragment.setButtonClickListener {
-                Toast.makeText( requireContext(),"Click ${mainViewModel.sheetName.value}", Toast.LENGTH_SHORT).show()
                 findNavController().navigate(R.id.action_menu_to_freezerResources)
             }
 

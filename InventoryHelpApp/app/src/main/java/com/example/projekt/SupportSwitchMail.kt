@@ -20,10 +20,6 @@ class SupportSwitchMail : Fragment() {
         return binding.root
     }
 
-    private fun setFreezerSwitchButtonClickListener(listener: View.OnClickListener) {
-        _binding?.mailSwitchButton?.setOnClickListener(listener)
-    }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

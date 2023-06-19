@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.projekt.databinding.FragmentStartScreenBinding
@@ -48,11 +47,9 @@ class StartScreen : Fragment() {
 
         })
 
-        binding.acceptButton.setOnLongClickListener {
+        binding.acceptButton.setOnClickListener {
             mainViewModel.saveSheetName(binding.raportName.text.toString())
-            Toast.makeText( requireContext(),"Click ${mainViewModel.sheetName.value}", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_startScreen_to_menu)
-            true
         }
 
         binding.circle.setOnClickListener {

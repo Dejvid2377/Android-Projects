@@ -29,9 +29,9 @@
         android:layout_height="wrap_content"
         android:hint="Tu wprowadź nazwę raportu..."
         android:textSize="25sp"
+        android:textColor="@color/white"
         android:layout_marginBottom="100dp"
-        tools:ignore="LabelFor"
-        />
+        tools:ignore="LabelFor" />
     <ImageView
         android:id="@+id/circle"
         android:layout_width="200dp"

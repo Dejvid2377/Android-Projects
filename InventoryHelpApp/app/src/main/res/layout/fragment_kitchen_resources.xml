@@ -1,16 +1,303 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".KitchenResources">
+    tools:context=".KitchenResources"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/preview">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wprowadź wartości poszczególnych produktów (KUCHNIA):"
+        android:textSize="30sp"
+        android:layout_marginBottom="10sp"
+        android:gravity="center"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="hello its kitchen" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
+        <TextView
+            android:id="@+id/information4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:text="Nazwa produktu"
+            android:gravity="center" />
 
+        <TextView
+            android:id="@+id/information5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:text="Jednostka wagi"
+            android:gravity="center" />
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/information6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Wartość"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/nameMeatXL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="kotlety XL"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/unitMeatXL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="sztuki"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/editMeatXL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="48dp"
+                android:textSize="20sp"
+                android:inputType="number"
+                android:hint="tutaj wprowadź.."
+                android:gravity="center" />
+        </TableRow>
+
+        <!-- Row 2 -->
+        <TableRow>
+
+            <TextView
+                android:id="@+id/nameMeatL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="kotlety L"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/unitMeatL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="sztuki"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/editMeatL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="48dp"
+                android:textSize="20sp"
+                android:inputType="number"
+                android:hint="tutaj wprowadź.."
+                android:gravity="center" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/nameBunXLPackage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="bułki XL"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/unitBunXLPackage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="pakiety"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/editBunXLPackage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="48dp"
+                android:textSize="20sp"
+                android:inputType="number"
+                android:hint="tutaj wprowadź.."
+                android:gravity="center" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/nameBunXL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="bułki XL"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/unitBunXL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="sztuki"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/editBunXL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="48dp"
+                android:textSize="20sp"
+                android:inputType="number"
+                android:hint="tutaj wprowadź.."
+                android:gravity="center" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/nameBunLPackage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="bułki L"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/unitBunLPackage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="opakowania"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/editBunLPackage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="48dp"
+                android:textSize="20sp"
+                android:inputType="number"
+                android:hint="tutaj wprowadź.."
+                android:gravity="center" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/nameBunL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="bułki L"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/unitBunL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="sztuki"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/editBunL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="48dp"
+                android:textSize="20sp"
+                android:inputType="number"
+                android:hint="tutaj wprowadź.."
+                android:gravity="center" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/nameChickenPackage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="kurczak"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/unitChickenPackage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="opakowania"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/editChickenPackage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="48dp"
+                android:textSize="20sp"
+                android:inputType="number"
+                android:hint="tutaj wprowadź.."
+                android:gravity="center" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/nameChicken"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="kurczak"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/unitChicken"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="sztuki"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/editChicken"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="48dp"
+                android:textSize="20sp"
+                android:inputType="number"
+                android:hint="tutaj wprowadź.."
+                android:gravity="center" />
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/submitKitchenButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="zatwierdź"/>
+</LinearLayout>
