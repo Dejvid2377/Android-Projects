@@ -225,6 +225,4 @@ class FreezerResources : Fragment() {
         val region = CellRangeAddress(firstRow, lastRow, firstCol, lastCol)
         sheet.addMergedRegion(region)
     }
-
-
 }
